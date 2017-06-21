@@ -17,4 +17,4 @@ Decidi publicar esse código fonte por motivos de manutenção de algo historica
 - Os códigos, desenhos, logos, textos e easter eggs no código foram feitos por [mim](https://multiverso.me/). Os códigos estão sob [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.txt) e o resto sob [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 - O game "[Amnesia: Fear in Hands](http://www.moddb.com/mods/amnesia-fear-in-hands/)" que aparece em algumas páginas, era um MOD desenvolvido pelo Lyautey M. Neto e o pessoal da [Blaster Lizard](https://www.facebook.com/blasterlizardcompany/). (Valeu pelo apoio e desculpa nunca lançar o projeto!)
 - A arte do background com várias referências legais foi feita sob encomenda pelo [Israel Dilean](http://dylean.deviantart.com/)
-- E um muito obrigado ao [Daniel](https://twitter.com/i_am_thirteen) que na época me ajudou muito com alguns textos e dicas sobre o design do site
+- E um muito obrigado ao [Daniel](https://twitter.com/i_am_thirteen), que na época me ajudou muito com alguns textos e dicas sobre o design do site
