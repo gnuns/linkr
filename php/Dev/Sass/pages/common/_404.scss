@@ -1,0 +1,52 @@
+.center-message {
+  width: 600px;
+  height: 500px;
+  margin: auto;
+  margin-top:80px;
+
+  .error-message{
+    width: 470px;
+    margin:auto;
+     font-family: $title-font-family;
+
+    .error-code {
+      color: #CCC;
+      padding: 0px;
+      margin: auto;
+      font-size: 30px;
+      text-align: center;
+      width: 460px;
+      line-height: normal;
+      clear: both;
+
+    }
+    .error-name {
+      color: #FFF;
+      padding: 0px;
+      margin: auto;
+      font-size: 40px;
+      line-height: normal;
+      text-align: center;
+      width: 460px;
+      clear: both;
+    }
+    .error-description {
+      color: #FFF;
+      padding: 0px;
+      margin: auto;
+      margin-top:0px;
+      font-size: 21px;
+      text-align: center;
+      line-height: normal;
+      width: 460px;
+      clear: both;
+    }
+  }
+  .ghost {
+    margin:auto;
+    width: 312px;
+    height: 308px;
+    background-repeat: no-repeat;
+    background-image: url('../images/ghost.png');
+  }
+}

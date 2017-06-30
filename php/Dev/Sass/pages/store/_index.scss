@@ -1,0 +1,658 @@
+.store-leading-area-banners {
+  width: 310px;
+  height: 360px;
+  @extend .pull-right;
+  position: relative;
+  overflow: hidden;
+  *:focus{
+    outline: 0;
+  }
+  .up {
+    height: 175px;
+    width: 310px;
+    position: absolute;
+    background-color: $boxes-color;
+    top:0;
+    border-radius: $border-radius; // 4px;
+		cursor: pointer;
+  }
+  .bottom {
+    height: 175px;
+    width: 310px;
+    background-color: $boxes-color;
+    position: absolute;
+    bottom: 0;
+    border-radius: $border-radius; // 4px;
+		cursor: pointer;
+  }
+}
+
+.store-index-slideshow {
+  width: 633px;
+  height: 356px;
+  background: $boxes-color; // url('../images/slidebg.png');
+  border-radius: $border-radius; // 6px;
+  overflow: hidden;
+  position: relative;
+  border: solid 3px $boxes-color;
+  @extend .pull-left;
+  .current-game-slide {
+    cursor: pointer;
+    z-index: 18;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+		display: none;
+    .cgs-image {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      //background-attachment:fixed;
+    }
+    .cgs-name {
+      z-index: 22;
+      position: absolute;
+      //font-family: $title-font-family;
+      //text-transform: uppercase;
+      border-radius: $border-radius; // 2px;
+      background: $boxes-color;
+      opacity: 0.95;
+      overflow: hidden;
+
+      font-size: 20px;
+      color: $text-color;
+      bottom:90px;
+      line-height: 20px;
+      left: 20px;
+      padding-top: 6px;
+			padding-left: 10px;
+			padding-right: 10px;
+      padding-bottom: 5px;
+      height: 22px;
+    }
+    .cgs-price {
+      z-index: 22;
+      position: absolute;
+      //font-family: $title-font-family;
+
+      //text-transform: uppercase;
+      border-radius: $border-radius; // 2px;
+
+				background-color: darken($highlight-color-store, 5%);
+      opacity: 0.95;
+      overflow: hidden;
+
+      font-size: 16px;
+      color: $text-color;
+      bottom:59px;
+      left: 20px;
+      line-height: 18px;
+				font-weight: $bold;
+      padding: 5px;
+      padding-bottom: 4px;
+      height: 20px;
+      .original-price {
+        opacity: 0.6;
+        color: darken($text-color, 12%);
+        text-decoration: line-through;
+        font-size: 12px;
+        clear: both;
+        width: 120px;
+      }
+      &.w-discount {
+					background: $boxes-color;
+        padding-top: 2px;
+        height: 45px;
+        left: 80px;
+        bottom:35px;
+        font-weight: $bold;
+        border-radius: 0px 2px 2px 0px;
+      }
+      &.soon {
+        font-size: 16px;
+        background: darken($highlight-color-store, 10%);
+        font-weight: $bold;
+      }
+    }
+    .cgs-discount {
+      //font-family: $title-font-family;
+      z-index: 20;
+      bottom:35px;
+      left: 20px;
+      position: absolute;
+
+      color: $text-color;
+
+      padding: 5px;
+      padding-top: 17px;
+      padding-bottom: 4px;
+
+      line-height: 20px;
+      font-size: 20px;
+      font-weight: $bold;
+      width: 50px;
+      text-align: center;
+      height: 30px;
+      border-radius: 2px 0px 0px 2px;
+      background-color: darken($color-green, 5%);
+      color: $e-text-color;
+    }
+  }
+  .control {
+    top: 53%;
+    position: absolute;
+    margin-top:-30px;
+    font-size: 30px;
+    line-height: 30px;
+    color: rgba(lighten($boxes-color, 65%), 0.2);//$highlight-color-store;
+    opacity: 1;
+    z-index: 30;
+    padding: 6px 4px;
+    padding-bottom: 6px;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    background-color: $boxes-color;
+    transition: all 0.15s ease-in-out 0s;
+    cursor: pointer;
+    &.prev {
+      left: 0px;
+      padding-right: 8px;
+      border-radius: 0px 4px 4px 0px;
+    }
+    &.next {
+      right: 0px;
+      padding-left: 8px;
+      border-radius: 4px 0px 0px 4px;
+    }
+    &:hover {
+      color: lighten($boxes-color, 68%);
+      transition: all 0.15s ease-in-out 0s;
+    }
+  }
+}
+.store-highlight-games-area {
+  width: 100%;
+  height: 450px;
+  padding: 0px;
+  margin:0;
+  margin-top:12px;
+  background-color: $boxes-color;
+  overflow: hidden;
+  border-radius: $border-radius; // 4px;
+
+	padding-bottom: 3px;
+  h1.area-title {
+    @extend .the-box-title;
+      font-weight: normal;
+      margin-bottom: 8px;
+      font-size: 20px;
+      line-height: 20px;
+  }
+
+  ul.games-display {
+    padding: 0px;
+    margin: 0px;
+    width: 960px;
+    height: 200px;
+    list-style: none outside none;
+    li {
+    //    $shadow-color: darken($boxes-color, 3%);
+      @extend .grid-pattern;
+      padding: 0px;
+      width: 225px;
+      height: 195px;
+      //border-radius: $border-radius; // 3px;
+      overflow: hidden;
+      float: left;
+      position: relative;
+      margin-left: 6.5px;
+      margin-bottom: 10px;
+      border:solid darken($boxes-color, 2%) 3px;
+
+        background-image: url('../images/shadow.png');
+      .img-bg {
+          opacity: 0.7;
+				//display: none;
+        width:225px;
+        height: 195px;
+        border: 0px;
+        background-position: center;
+        background-size: cover;
+        //outline: 0;
+        /*-webkit-box-shadow: inset 0px 5px 26px 12px rgba($shadow-color, 0.5);
+        -moz-box-shadow:    inset 0px 5px 26px 12px rgba($shadow-color, 0.5);
+        box-shadow:         inset 0px 5px 26px 12px rgba($shadow-color, 0.5);*/
+        -webkit-user-select: none;  -khtml-user-select: none;   -moz-user-select: none; -o-user-select: none;    user-select: none;
+      }
+      &:hover {
+
+        border: solid darken($boxes-color-hover, 2%) 3px;
+        cursor: pointer;
+        .img-bg {
+            transition: opacity  0.2s ease-in-out;
+            opacity: 1;
+         /* -webkit-box-shadow: inset 0px 5px 30px 16px rgba($shadow-color, 0.8);
+          -moz-box-shadow:    inset 0px 5px 30px 16px rgba($shadow-color, 0.8);
+          box-shadow:         inset 0px 5px 30px 16px rgba($shadow-color, 0.8);*/
+        }
+        .game-tag {
+            transition: opacity 0.2s ease-in-out;
+          opacity: 0.8;
+        }
+      }
+
+      .game-tag {
+        z-index: 99;
+        position: absolute;
+        //font-family: $title-font-family;
+        font-weight: $bold;
+        //text-transform: uppercase;
+        border-radius: $border-radius; // 2px;
+        background: $boxes-color;
+        opacity: 0.95;
+				// text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15);
+        &.name {
+          font-size: 16px;
+          color: $text-color;
+          bottom:42px;
+          left: 5px;
+          padding: 4px 6px;
+          height: 22px;
+        }
+        &.price {
+          font-size: 14px;
+          color: $text-color;
+          bottom:17px;
+          line-height: 14px;
+          left: 5px;
+          padding: 5px;
+          padding-bottom: 4px;
+          height: 14px;
+          .original-price {
+            opacity: 0.6;
+            color: darken($text-color, 12%);
+            text-decoration: line-through;
+            font-size: 12px;
+          }
+        }
+        &.discount {
+          font-size: 18px;
+          color: $text-color;
+          top: 0px;
+          right: 0px;
+          padding: 5px;
+          padding-bottom: 4px;
+          line-height: 20px;
+          min-width: 30px;
+          text-align: center;
+          height: 20px;
+          border-radius: 0px 2px 0px 2px;
+          background-color: darken($color-green, 5%);
+          color: $e-text-color;
+        }
+      }
+     .a-overlay {
+        position: absolute;
+        width: 232px;
+        height: 200px;
+        outline: 0;
+        left: 0;
+        top: 0;
+        z-index: 101;
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+  }
+}
+.store-last-updates-area {
+  width: 100%;
+  height: 295px;
+  padding: 0px;
+  margin:0;
+  margin-top:10px;
+    padding-bottom: 3px;
+  background-color: $boxes-color;
+  overflow: hidden;
+  border-radius: $border-radius; // 4px;
+
+  h1.area-title {
+    @extend .the-box-title;
+      font-weight: normal;
+      margin-bottom: 8px;
+      font-size: 20px;
+      line-height: 20px;
+  }
+
+  ul.games-display {
+    padding: 0px;
+    margin: 0px;
+    width: 960px;
+    height: 260px;
+    list-style: none outside none;
+    li {
+      background: darken($boxes-color, 2%) repeat;
+      opacity: 1;
+      padding: 0px;
+      width: 225px;
+      height: 250px;
+      //border-radius: $border-radius; // 3px;
+      overflow: hidden;
+      float: left;
+      position: relative;
+      margin-left: 6.5px;
+      border:solid darken($boxes-color, 2%) 3px;
+
+      .game-img {
+				@extend .grid-pattern;
+        background-color: none;
+        position: relative;
+        width:235px;
+        height:135px;
+        border: 0px;
+        outline: 0;
+        overflow: hidden;
+        -webkit-user-select: none;  -khtml-user-select: none;   -moz-user-select: none; -o-user-select: none;    user-select: none;
+        img {
+          opacity: 0.8;
+          transition: all 0.15s ease-in-out 0s;
+          width:235px;
+          height:135px;
+        }
+      }
+      &:hover {
+        border: solid darken($boxes-color-hover, 2%) 3px;
+        cursor: pointer;
+        background: darken($boxes-color-hover, 2%);
+        transition: all 0.15s ease-in-out 0s;
+        .game-img {
+          img {
+            width:1.07*235px;
+            height:1.07*135px;
+            opacity: 1;
+            transition: all 0.15s ease-in-out 0s;
+          }
+        }
+        .game-tag {
+          opacity: 0.85;
+          transition: all 0.15s ease-in-out 0s;
+        }
+      }
+      .game-tag {
+        transition: all 0.15s ease-in-out 0s;
+        z-index: 99;
+        position: absolute;
+        font-family: $title-font-family;
+
+        text-transform: uppercase;
+        border-radius: $border-radius; // 2px;
+        background: darken($body-bg, 14%);
+        opacity: 0.95;
+        &.name {
+          font-size: 17px;
+          color: #F1F1F1;
+          bottom:42px;
+          left: 5px;
+          padding: 4px 6px;
+          height: 24px;
+        }
+        &.price {
+          font-size: 14px;
+          color: $text-color;
+          bottom:17px;
+          line-height: 14px;
+          left: 5px;
+          padding: 5px;
+          padding-bottom: 4px;
+          height: 14px;
+          .off {
+            opacity: 0.7;
+            color: $color-red;
+            text-decoration: line-through;
+            font-size: 12px;
+          }
+        }
+        &.price-off {
+          font-size: 18px;
+          color: $text-color;
+          top: 0px;
+          right: 0px;
+          padding: 5px;
+          padding-bottom: 4px;
+          line-height: 20px;
+          min-width: 30px;
+          text-align: center;
+          height: 20px;
+          border-radius: 0px 2px 0px 2px;
+          background-color: darken($color-green, 5%);
+          color: $e-text-color;
+        }
+      }
+      .update-description {
+        font-size: 12px;
+        color: #999;
+        // text-shadow: 0px 1px 2px darken(darken($third-color, 7%), 13%);
+        width: 220px;
+        margin: auto;
+        margin-top:5px;
+      }
+      .a-overlay {
+        position: absolute;
+        width: 232px;
+        height: 250px;
+        outline: 0;
+        left: 0;
+        top: 0;
+        z-index: 101;
+        &:focus, &:href {
+          outline: 0;
+        }
+      }
+    }
+  }
+}
+.store-index-area-three {
+  clear: both;
+  width: 100%;
+  min-height: 400px;
+  padding: 0px;
+  margin:0;
+  margin-top:10px;
+  overflow: hidden;
+
+  .s-banners {
+    width: 325px;
+    min-height: 150px;
+    margin-top:0px;
+    @extend .pull-right;
+    .pub-banner {
+      border-radius: $border-radius; // 4px;
+      width: 300px;
+      height: 260px;
+      overflow: hidden;
+      background-color: $fourth-color;
+      padding: 10px;
+      padding-bottom: 20px;
+      padding-top: 30px;
+    }
+  }
+
+.sub-showcase {
+  width: 620px;
+  min-height: 150px;
+  display: block;
+  background-color: $boxes-color;
+  border-radius: $border-radius; // 5px;
+  overflow: hidden;
+  width: 620px;
+  @extend .pull-left;
+    ul.s-titles {
+      width: 100%;
+      background-color: lighten($fourth-color, 2%);
+      margin: 0px;
+      padding: 0px;
+      list-style: none outside none;
+      height: 38px;
+      overflow: hidden;
+      border-bottom: $fourth-color 1px solid;
+
+      li{
+        font-family: $title-font-family;
+        cursor: pointer;
+        // text-shadow: 0px 1px 2px darken(#2B2B2B, 4%);
+        text-transform: uppercase;
+        padding: 10px;
+        padding-top: 11px;
+        line-height: 19px;
+        //font-weight: $bold;
+        font-size: 18px;
+        min-width: 60px;
+        min-height: 30px;
+        margin: 0px;
+        color: lighten($fourth-color, 30%);
+        background-color: lighten($fourth-color, 2%);
+        border-right: $fourth-color 1px solid;
+        @extend .pull-left;
+        transition: all 0.15s ease-in-out 0s;
+
+        &.current{
+          background-color: $boxes-color;
+          color: #FFF;
+          //font-weight: $bold;
+          //border-radius: 6px 0px 0px 6px;
+          //border-right: #2B2B2B 1px solid;
+          &:hover {
+            color: #FFF;
+            background-color:  $fourth-color;
+            cursor:default;
+          }
+        }
+        &:hover {
+          color: lighten(lighten(lighten($fourth-color, 2%), 2%), 50%);
+          background: lighten(lighten($fourth-color, 2%), 1%);
+          transition: all 0.15s ease-in-out 0s;
+        }
+      }
+    }
+    ul.s-game-list {
+      height: 415px;
+      padding: 0px;
+      margin: 0px;
+      list-style: none outside none;
+      margin-bottom: 5px;
+			display: none;
+			&.visible {
+				display: block;
+			}
+      li
+      {
+        cursor: pointer;
+        position: relative;
+        width: 620px;
+        height: 80px;
+        background-color: lighten($boxes-color, 1%);
+        //border-radius: $border-radius; // 4px;
+        margin-top: 3px;
+        overflow: hidden;
+        //border:solid $boxes-color 2px;
+
+        &:hover {
+          //border:solid $boxes-color-hover 2px;
+          background-color: $boxes-color-hover;
+          transition: all 0.15s ease-in-out 0s;
+          .img-game {
+            border-left: 3px $highlight-color-store solid;
+            img {
+              opacity: 1;
+              transition: all 0.15s ease-in-out 0s;
+            }
+          }
+          .game-price {
+            background-color: darken($highlight-color-store, 10%);
+            color: #FFF;
+            transition: all 0.15s ease-in-out 0s;
+          }
+          .game-info {
+            &.title {
+              color: #FFF;
+            }
+            &.genre, &.release {
+              color: #AAA;
+            }
+          }
+        }
+        .img-game {
+          @extend .grid-pattern;
+          transition: all 0.15s ease-in-out 0s;
+          position: absolute;
+          left: 3px;
+          border-left: 3px $boxes-color-hover solid;
+          top: 0;
+          width: 175px;
+          height: 80px;
+          img {
+            background-color: darken($fourth-color, 2%);
+            transition: all 0.15s ease-in-out 0s;
+            width: 175px;
+            height: 80px;
+            opacity: 0.6;
+          }
+        }
+        .game-info {
+          //font-family: $title-font-family;
+          position: absolute;
+          left: 188px;
+          font-size: 14px;
+          &.title{
+            font-weight: $bold;
+            top:5px;
+            color: #DDD;
+          }
+          &.genre{
+            top:25px;
+            color: #999;
+          }
+          &.release{
+            top:45px;
+            color: #999;
+          }
+        }
+        .game-price {
+          position: absolute;
+          right: 15px;
+          top: 23px;
+          //font-family: $title-font-family;
+          font-weight: $bold;
+          text-transform: uppercase;
+          border-radius: $border-radius; // 2px;
+          background: lighten($fourth-color, 4%);
+          opacity: 0.95;
+          font-size: 16px;
+          color: #DDD;
+          bottom:42px;
+          padding: 4px 6px;
+          height: 20px;
+          transition: all 0.15s ease-in-out 0s;
+        }
+        .a-overlay {
+          position: absolute;
+          width: 615px;
+          height: 75px;
+          outline: 0;
+          left: 0;
+          top: 0;
+          z-index: 101;
+          &:focus, &:href {
+            outline: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+.default-container{
+  width: $default-width;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0px;
+  position: relative;
+  @include center-block();
+}
+.wrapper {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  min-height:100%;
+  height: auto;
+}
+.body-container {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  padding-top:60px;
+  padding-bottom: 240px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: auto;
+  clear: both;
+}
+.leading-area {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: table;
+}
+.hint {
+  font-family: $title-font-family;
+  top: 52px;
+  left: 0;
+	margin-top:10px;
+  padding: 4px 8px;
+  border-radius: $border-radius; // 3px;
+  background: darken(lighten($second-color, 1%), 10%);
+  line-height: 13px;
+  font-size: 13px;
+  color: lighten(darken(lighten($second-color, 1%), 5%), 42%);
+  opacity: 0.9;
+
+  color: $text-color;
+	position: fixed;
+	z-index: 1000000;
+  display: none;
+
+	.tset {
+		border-bottom: 5px solid darken(lighten($second-color, 1%), 10%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    height: 0px;
+    position: absolute;
+    top: -5px;
+		left: 50%;
+		margin-left: -5px;
+    width: 0px;
+		z-index: 1000002;
+	}
+	
+  &.buy-h {
+    opacity: 1;
+    border-radius: $border-radius; // 2px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    padding: 4px 70px;
+    margin-top: 1px;
+    margin-left: 1px;
+    background: darken($color-green, 2%);
+    color: lighten(darken($color-green, 10%), 70%);
+  }
+  &.rmv-h {
+    opacity: 0.9;
+    background: darken($color-red, 3%);
+    color: lighten($color-red, 40%);
+    margin-top:5px;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 3px 4px;
+    margin-left: -60px;
+  }
+}
+
+/************ MODAL ***************/
+/*!
+	Linkr Modal Plugin is based on "The Modal" css file, by
+	Alexander Makarov <https://github.com/samdark>
+*/
+.modal-lock {
+/* when modal is opened we're removing scrollbars from the main content */
+overflow: hidden;
+}
+.modal-overlay {
+	/* overlay will stay fixed and will take all the space available */
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 15000;
+	/* if modal content doesn't fit inside the overlay, display scrollbars */
+	overflow: none;
+	/* allow one-finger iPad scrolling */
+	-webkit-overflow-scrolling: touch;
+		background: rgba(0, 0, 0, 0.5);
+	/* IE6–IE8 */
+	display: none;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #7F000000, endColorstr = #7F000000);
+	zoom: 1;
+	&>* {
+		/* fix for iPad glitches */
+		-webkit-transform: translateZ(0px);
+	}
+}
+
+
+.modal {
+	background: $boxes-color;
+	padding: 5px;
+  width: 600px;
+	min-height: 150px;
+	max-height: 600px;
+	overflow: hidden;
+  margin: 5% auto;
+	border-radius: $border-radius;
+	position: relative;
+	transition: all 0.15s ease-in-out 0s;
+	.body {
+		width: auto;
+		min-width: 590px;
+  	max-width: 820px;
+		max-height:550px;
+		margin: auto;
+		margin-top: 10px;
+		clear: both;
+		text-align: center;
+		overflow-y: auto;
+		display: table;
+	}
+	.title {
+		@extend .the-box-title;
+	}
+	.close {
+		cursor: pointer;
+		position: absolute;
+		top:5px;
+		right: 10px;
+		margin: 0px;
+		font-size: 16px;
+		line-height: 16px;
+		color: $text-color;
+		font-weight: $bold;
+		font-family: $title-font-family;
+		opacity: 0.6;
+		&:hover {
+			opacity: 1;
+			color: $color-red;
+		}
+	}
+}

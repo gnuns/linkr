@@ -1,0 +1,20 @@
+// The *.style.css are just for set the highlighted color of each website part.
+// Helpers
+@import "helpers/variables",
+        "helpers/mixins";
+// Defines the current theme highlighted color
+$highlighted-color: $highlight-color-store;
+// Global textual link color.
+$link-color: darken($highlighted-color, 1%) !default;
+$link-hover-color: lighten($link-color, 10%) !default;
+
+@import "main";
+@import "pages/store/game",
+        "pages/store/index",
+        "pages/store/user-profile",
+        "pages/store/user-settings",
+        "pages/store/register-and-login",
+        "pages/store/shopping-cart",
+	      "pages/store/search",
+        "pages/common/404";
+

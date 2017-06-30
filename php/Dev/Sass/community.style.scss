@@ -1,0 +1,13 @@
+// The *.style.css are just for set the highlighted color of each website part.
+// Helpers
+@import "helpers/variables",
+        "helpers/mixins";
+// Defines the current theme highlighted color
+$highlighted-color: $highlight-color-community;
+// Global textual link color.
+$link-color: darken($highlighted-color, 1%) !default;
+$link-hover-color: lighten($link-color, 10%) !default;
+
+@import "main";
+@import "pages/common/404";
+

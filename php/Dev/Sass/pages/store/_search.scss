@@ -1,0 +1,177 @@
+.search-page {
+  @extend .pull-left;
+  width: 630px;
+  overflow: hidden;
+  min-height: 180px;
+  background-color: $boxes-color;
+  border-radius: $border-radius; // 4px;
+  color: lighten($boxes-color, 45%);
+  font-family: $title-font-family;
+  font-size: 14px;
+  position: relative;
+  line-height: 14px;
+  padding-bottom: 5px;
+	.t-title {
+		@extend .the-box-title;
+		text-transform: none;
+		font-weight: normal;
+		font-size: 19px;
+	}
+	ul.game-list {
+		padding: 0px;
+		width: 100%;
+		li {
+			position: relative;
+			width: 100%;
+			height: 100px;
+			overflow: hidden;
+			padding: 0px;
+			cursor: pointer;
+			opacity: 0.95;
+			transition: all 0.15s ease-in-out 0s;
+			margin-bottom: 4px;
+
+			background-color: rgba(34, 40, 40,0.8);
+			@extend .grid-pattern-light;
+			.game-img {
+				width: 100%;
+				height: 100px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background: center center;
+				background-color: lighten($second-color, 8%);
+				background-size: cover;
+				opacity: 0.2;
+				z-index: 1;
+				transition: all 0.15s ease-in-out 0s;
+
+			}
+			.game-data {
+				width: 100%;
+				height: 100px;
+				position: absolute;
+				z-index: 180;
+				top: 0px;
+				left: 0px;
+				opacity: 0.9;
+				color: lighten($second-color, 75%);
+				transition: all 0.15s ease-in-out 0s;
+				font-family: $title-font-family;
+
+				.title {
+					position: absolute;
+					top: 10px;
+					left: 15px;
+
+					font-size: 20px;
+					padding: 9px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					border-radius: $border-radius; // 2px;
+					background: $boxes-color;
+					line-height: 20px;
+				}
+				.devname {
+					position: absolute;
+					bottom: 33px;
+					left: 15px;
+
+					font-size: 16px;
+					padding: 8px;
+					padding-top: 2px;
+					padding-bottom: 2px;
+					border-radius: $border-radius; // 2px;
+					background: $boxes-color;
+					line-height: 20px;
+					//font-weight: $bold;
+
+				}
+				.price {
+					position: absolute;
+					//font-family: $title-font-family;
+					bottom: 25px;
+					right: 15px;
+					//
+					border-radius: $border-radius; // 3px;
+					background: $boxes-color;
+					overflow: hidden;
+
+					font-size: 22px;
+					line-height: 22px;
+					padding: 7px;
+					padding-bottom: 4px;
+					padding-top: 15px;
+					height: 30px;
+					.original-price {
+						opacity: 0.6;
+						color: darken($text-color, 12%);
+						text-decoration: line-through;
+						font-size: 12px;
+						line-height: 12px;
+						clear: both;
+						width: 120px;
+					}
+					&.w-discount {
+						padding-top: 2px;
+						padding-bottom: 3px;
+						height: 50px;
+						right: 75px;
+						bottom: 20px;
+
+						border-radius: 2px 0px 0px 2px;
+					}
+					&.soon {
+						font-size: 16px;
+						background: darken($highlighted-color, 10%);
+
+					}
+				}
+				.discount {
+					//font-family: $title-font-family;
+					z-index: 20;
+					bottom:20px;
+					right: 15px;
+					position: absolute;
+					padding: 5px;
+					padding-top: 18px;
+					padding-bottom: 17px;
+					line-height: 20px;
+					font-size: 20px;
+					width: 50px;
+					text-align: center;
+					height: 20px;
+					border-radius: 0px 2px 2px 0px;
+					background-color: darken($color-green, 5%);
+				}
+			}
+			&:hover {
+				opacity: 1;
+				transition: all 0.15s ease-in-out 0s;
+				background-color: lighten($second-color, 4%);
+				.game-img {
+					opacity: 0.9;
+					transition: all 0.15s ease-in-out 0s;
+				}
+				.game-data {
+					transition: all 0.15s ease-in-out 0s;
+					background-color: rgba(0,0,0,0.2);
+					color: lighten($second-color, 65%);
+				}
+			}
+		}
+	}
+}
+.search-sidebar {
+	@extend .pull-right;
+  width: 310px;
+  min-height: 150px;
+  background-color: lighten($boxes-color, 2%);
+  border-radius: $border-radius; // 4px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	.get-linkr, .read-more {
+		width: 310px;
+		border-radius:  0px;
+	}
+}

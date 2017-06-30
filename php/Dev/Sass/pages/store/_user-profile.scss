@@ -1,0 +1,484 @@
+/*
+A website can make a post on a user wall without permission
+fb_dtsg
+*/
+.user-profile-left-area {
+  @extend .pull-left;
+  width: 645px;
+  .header {
+    width: 645px;
+    height: 170px;
+    background-color: $boxes-color;
+    border-radius: $border-radius; // 4px;
+    position: relative;
+    //clear: both;
+    padding: 0px;
+    //background-size: cover;
+    overflow: hidden;
+
+    // LINUS RULES!
+    // THANK YOU FOR THIS AWESOME SYSTEM!!1
+    // (YOU ARE ALSO FUCKING AWESOME, STALLMAN!)
+    .linus-profile-img {
+      position: absolute;
+      top: 19px;
+      left: 21px;
+      width: 128px; // 132
+      height: 128px;
+      border: 2px solid $second-color;
+      background: top center;
+      background-size: cover;
+      background-color: $second-color;
+    }
+
+    .linus-profile-byuser-data {
+      //transition: all 0.15s ease-in-out 0s;
+      position: absolute;
+      top: 22px;
+      left: 158px;
+      width: 450px;
+
+      font-size: 20px;
+      line-height: 21px;
+      color: lighten($boxes-color, 45%);
+      div {
+        clear: both;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        cursor: default;
+        word-break: break-all;
+        word-wrap: break-word;
+      }
+      .display-name {
+        font-family: $title-font-family;
+        color: $text-color;
+        font-size: 20px;
+        line-height: 21px;
+        font-weight: $bold;
+      }
+      .system-name {
+        //color: $text-color;
+        font-size: 14px;
+        line-height: 15px;
+        //font-weight: $bold;
+        margin-top: 5px;
+      }
+      .display-motto {
+        color: $text-color;
+        font-size: 12px;
+        line-height: 13px;
+         margin-top: 4px;
+        //font-weight: $bold;
+      }
+      .display-location {
+        //color: $text-color;
+        font-size: 12px;
+        line-height: 13px;
+         margin-top: 4px;
+        //font-weight: $bold;
+      }
+      .display-href {
+        //color: $text-color;
+        font-size: 12px;
+        line-height: 13px;
+         margin-top: 4px;
+        //font-weight: $bold;
+        a {
+          color: lighten($boxes-color, 48%);
+          transition: all 0.15s ease-in-out 0s;
+          //font-weight: $bold;
+          &:hover {
+            transition: all 0.15s ease-in-out 0s;
+            opacity: 0.8;
+          }
+        }
+      }
+      .team-and-role {
+        font-size: 12px;
+        line-height: 13px;
+        height: 14px;
+        color: darken($highlight-color-publish, 1%);
+        margin-top: 20px;
+        a {
+          color: darken($highlight-color-publish, 3%);
+          transition: all 0.15s ease-in-out 0s;
+          font-weight: $bold;
+          &:hover {
+            transition: all 0.15s ease-in-out 0s;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+  .bio {
+    cursor: default;
+    width: 645px;
+    min-height: 120px;
+    background-color: $boxes-color;
+    border-radius: $border-radius; // 4px;
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    margin-top: 10px;
+    line-height: 14px;
+    font-size: 12px;
+
+    .bio-area {
+      width: 620px;
+      min-height: 80px;
+      margin: auto;
+      margin-top: 12.5px;
+      margin-bottom: 12.5px;
+      color: lighten($boxes-color, 55%);
+    }
+    .thereisnobio {
+      $fore: lighten($boxes-color, 2%);
+      $back: $boxes-color;
+      &::-moz-selection {
+        color: $fore;
+        background: $back;
+      }
+      &::selection {
+        color: $fore;
+        background: $back;
+      }
+      color: lighten($boxes-color, 2%);
+      width: 500px;
+      height: 31px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -17px;
+      margin-left: -250px;
+      text-align: center;
+      font-style: italic;
+      font-size: 30px;
+      line-height: 31px;
+    }
+  }
+  .feed {
+    cursor: default;
+    width: 645px;
+    min-height: 120px;
+    background-color: $boxes-color;
+    border-radius: $border-radius; // 4px;
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    margin-top: 10px;
+    line-height: 14px;
+    font-size: 13px;
+    .title {
+      @extend .the-box-title;
+			margin-bottom: 7px;
+			margin-top: 4px;
+    }
+		.a-update {
+			width: 645px;
+			clear: both;
+			min-height: 70px;
+			overflow: hidden;
+			padding-top: 3px;
+			//padding-bottom: 3px;
+			position: relative;
+			.author-img {
+				cursor: pointer;
+				background-size: cover;
+				float:left;
+				margin-left:10px;
+				width: 64px;
+				height: 64px;
+				position: relative;
+				overflow: hidden;
+				border: 2px solid $second-color;
+				.author-rank-strip {
+					font-family: $title-font-family;
+					position: absolute;
+					font-size: 11px;
+					color: $second-color;
+					//font-weight: $bold;
+					text-align: center;
+					width: 64px;
+					bottom: 4px;
+					left: 0px;
+					opacity: 0.9;
+					&.gamer {
+						background-color: $highlighted-color;
+						// text-shadow: 1px 1px 3px lighten($highlighted-color, 5%);
+					}
+					&.dev {
+						background-color: $highlight-color-publish;
+						// text-shadow: 1px 1px 3px lighten($highlight-color-publish, 5%);
+					}
+					&.member {
+						background-color: $highlight-color-community;
+						// text-shadow: 1px 1px 3px lighten($highlight-color-community, 5%);
+					}
+				}
+			}
+			.the-update {
+
+				width: 543px;
+				margin-right: 15px;
+				float: right;
+				.comment-title {
+					font-family: $title-font-family;
+					line-height: 18px;
+					font-size: 17px;
+					padding: 0px;
+					margin: 0px;
+					.author-name {
+						cursor: pointer;
+					}
+					.comment-timestamp {
+						opacity: 0.4;
+						font-size: 12px;
+						margin-left: 5px;
+					}
+				}
+				.comment-content {
+					width: 540px;
+					margin-top: 5px;
+					margin-bottom: 5px;
+					min-height: 45px;
+					color: lighten($boxes-color, 40%);
+					padding-bottom: 5px;
+				}
+			}
+		}
+		.feed-load {
+			@extend .load-and-post;
+			margin-bottom: 10px;
+		}
+		.thereisnofeed {
+      $fore: lighten($boxes-color, 8%);
+      $back: $boxes-color;
+      &::-moz-selection {
+        color: $fore;
+        background: $back;
+      }
+      &::selection {
+        color: $fore;
+        background: $back;
+      }
+      color: lighten($boxes-color, 8%);
+      width: 300px;
+			clear: both;
+			padding: 50px;
+			margin: auto;
+      height: 35px;
+      text-align: center;
+      ///font-style: italic;
+      font-size: 16px;
+      line-height: 31px;
+    }
+  }
+}
+
+.user-profile-right-area {
+  @extend .pull-right;
+  width: 300px;
+  .title {
+		@extend .the-box-title;
+		margin-bottom: 7px;
+		margin-top: 4px;
+  }
+  .friends {
+    .title {
+      cursor: pointer;
+    }
+    width: 290px;
+    min-height: 100px;
+    border-radius: $border-radius; // 4px;
+    //padding: 5px;
+    overflow: hidden;
+    background-color: $boxes-color;
+    margin-top: 10px;
+    .linus-profile-friends-list {
+      padding-bottom: 10px;
+      //padding-top: px;
+      .friend {
+        cursor: pointer;
+        //cursor: default;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        font-family: $title-font-family;
+        height: 48px;
+        overflow: hidden;
+        //color: $text-color;
+        transition: all 0.15s ease-in-out 0s;
+        /*
+          $highlighted-color: #22A86C; //rgb(34,168,108)
+          $highlight-color-community: #0A999D;
+          $highlight-color-publish: #D64541;//$gray-lighter;
+        */
+        div.avatar {
+          position: absolute;
+          left: 10px;
+          top: 6px;
+          width: 32px;
+          height: 32px;
+          border: 2px solid $second-color;
+          background: top center;
+          background-size: cover;
+          background-color: $second-color;
+        }
+        .data {
+          position: absolute;
+          left: 52px;
+          top: 6px;
+          width: 220px;
+
+          .name {
+            clear: both;
+            color: $text-color;
+            font-size: 18px;
+            margin-left: -2px;
+            line-height: 19px;
+            background: transparent;
+            //font-weight: $bold;
+            //width: 100%;
+          }
+          .status {
+						width: 200px;
+            margin-top: 2px;
+            clear: both;
+            font-size: 14px;
+            height: 16px;
+            line-height: 15px;
+            background: transparent;
+							margin-left: -5px;
+            &.online {
+              color: darken($color-green, 2%);
+            }
+            &.offline {
+              color: darken($color-red, 2%);
+            }
+            &::before {
+              content: ".";
+              color: transparent;
+              font-size: 3px;
+              //font-family: 'FontAwesome';
+            }
+          }
+          //font-weight: $bold;
+        }
+        &:hover {
+          transition: all 0.15s ease-in-out 0s;
+          background-color: darken($boxes-color, 2%);
+        }
+      }
+    }
+  }
+  .status {
+    width: 290px;
+    min-height: 200px;
+    border-radius: $border-radius; // 4px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: $boxes-color;
+		.title {
+			@extend .the-box-title;
+			margin-bottom: 7px;
+			margin-top: 4px;
+		}
+    .linus-profile-bysystem-data {
+      width: 270px;
+      margin: auto;
+      //transition: all 0.15s ease-in-out 0s;
+      clear: both;
+      font-family: $title-font-family;
+      font-size: 16px;
+      line-height: 16px;
+      color: lighten($boxes-color, 46%);
+      div {
+        //clear: both;
+        //width: 100%;
+        margin: 0px;
+        padding: 0px;
+        margin: auto;
+        cursor: default;
+      }
+
+      .connection-status {
+        width: 63px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 21px;
+        height: 21px;
+        padding: 2px 3px;
+        // text-shadow: none;
+        background-color: $second-color;
+        color: $boxes-color;
+        border-radius: $border-radius; // 3px;
+        opacity: 0.9;
+        &.online {
+          background-color: darken($color-green, 2%);
+        }
+        &.offline {
+          background-color: darken($color-red, 2%);
+        }
+      }
+      .last-online {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        clear: both;
+        font-size: 14px;
+        line-height: 15px;
+        height: 15px;
+        margin-top: 4px;
+        opacity: 0.9;
+      }
+    }
+    .linus-profile-activity {
+      margin-left: 10px;
+      padding-bottom: 5px;
+      padding-top: 13px;
+      .activity {
+        cursor: default;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        font-family: $title-font-family;
+        font-size: 16px;
+        line-height: 17px;
+        height: 32px;
+        overflow: hidden;
+        color: $text-color;
+        /*
+          $highlighted-color: #22A86C; //rgb(34,168,108)
+          $highlight-color-community: #0A999D;
+          $highlight-color-publish: #D64541;//$gray-lighter;
+        */
+        &.community {
+          color: $highlight-color-community;
+        }
+        &.publisher {
+          color: $highlight-color-publish;
+        }
+        .fa-gamepad {
+          margin-top: -2px;
+          font-size: 24px;
+        }
+        span.icon {
+          position: absolute;
+          left: 10px;
+          top: 0px;
+          font-size: 22px;
+        }
+        span.data {
+          position: absolute;
+          left: 42px;
+          top: 4px;
+          //font-weight: $bold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+.usettings-content {
+	@extend .pull-right;
+	width: 710px;
+	height: auto;
+	.content-box {
+
+		width: 700px;
+		min-height: 200px;
+		background-color: $boxes-color;
+		border-radius: $border-radius; // 3px;
+		overflow: hidden;
+		position: relative;
+		padding: 3px;
+		padding-bottom: 45px;
+		margin-bottom: 15px;
+		&.prof {
+			height: 300px;
+		}
+		&.hist {
+			width: 703px;
+			padding: 0px;
+			padding-bottom: 45px;
+			.title {
+				margin: 3px;
+			}
+			.post-form {
+				bottom: 8px;
+			}
+		}
+
+		&.delacc {
+			min-height: 90px;
+			.title {
+				color: $color-red;
+			}
+			.r-form {
+				width: 680px;
+				margin: auto;
+				.form-item {
+					width: 100%;
+					.item-info{
+						width: 100%;
+						color: lighten($boxes-color, 70%);
+					}
+				}
+			}
+			.post-form {
+				background-color: darken($color-red, 9%);
+				width: 150px;
+				left: 50%;
+				margin-left: -90px;
+			}
+		}
+		.title {
+			@extend .the-box-title;
+			color: lighten($second-color, 60%);
+		}
+		.r-form {
+			@extend .form-hippie;
+			width: 500px;
+			margin-left: 10px;
+		}
+		.post-form {
+			position: absolute;
+			right: 15px;
+			bottom: 13px;
+			&.middle {
+				width: 200px;
+				left: 50%;
+				margin-left: -107px;
+				font-size: 13px;
+				line-height: 13px;
+				height: 19px;
+				padding: 7px 7px 0px 7px;
+
+				&.disabled {
+					background-color: lighten($boxes-color, 45%);
+					cursor: default;
+					opacity: 0.8;
+				}
+			}
+		}
+		.profavatar {
+			position: absolute;
+			border: 2px solid lighten(lighten($second-color, 3%), 3%);
+			border-radius: $border-radius; // 2px;
+			background-color: lighten($boxes-color, 2%);
+			width: 192px;
+			height: 222px;
+			right: 15px;
+			top: 35px;
+			overflow: hidden;
+			.pa-img {
+				position: absolute;
+				top: 0px;
+				width: 192px;
+				height: 192px;
+				background-size: cover;
+				background-position: center center;
+			}
+			.pa-buttons {
+				position: absolute;
+				bottom: 0px;
+				width: 192px;
+				height: 30px;
+				background-color: lighten(lighten($second-color, 3%), 3%);
+				font-family: $title-font-family;
+				color: $text-color;
+				text-align: center;
+				//font-weight: $bold;
+				font-size: 16px;
+
+
+
+				>div {
+					width: 50%;
+					height: 30px;
+					position: absolute;
+					padding-top: 3px;
+					cursor: pointer;
+					opacity: 0.8;
+					transition: all 0.15s ease-in-out 0s;
+					&:hover {
+						opacity: 1;
+					}
+				}
+				.chng {
+					background-color: lighten(lighten($second-color, 3%), 3%);
+					left:0px;
+					cursor: pointer;
+					//position: relative;
+					.select {
+					    position: absolute;
+					    bottom:0;
+					    left:0;
+					    width: 96px;
+					    height: 30px;
+					    opacity: 0;
+					    cursor: pointer;
+					    z-index: 100;
+					}
+					.txt {
+					   position: absolute;
+					   z-index: 99;
+					   left: 0px;
+					   width: 96px;
+					   cursor: pointer;
+					}
+				}
+				.rmv {
+					background-color: $color-red;
+					right:0px;
+				}
+			}
+		}
+	}
+}
+.usettings-sidebar {
+	width: 235px;
+	height: 200px;
+	background-color: $boxes-color;
+	border-radius: $border-radius; // 3px;
+	overflow: hidden;
+	@extend .pull-left;
+	font-family: $title-font-family;
+	.udata {
+		width: 235px;
+		height: 62px;
+		margin-top: 7px;
+		margin-bottom: 7px;
+		position: relative;
+		clear: both;
+		.avatar {
+			position: absolute;
+			left:7px;
+			width: 48px;
+			height: 48px;
+			background-size: cover;
+			background-color: $second-color;
+			border: 2px solid lighten($second-color, 3%);
+		}
+		.uname {
+			cursor: default;
+			position: absolute;
+			left: 67px;
+			color: lighten($boxes-color, 59%);
+			&.account {
+				top: 8px;
+				font-size: 18px;
+				line-height: 19px;
+
+
+			}
+			&.profile {
+				top: 28px;
+				font-size: 14px;
+				line-height: 15px;
+				margin-left: 1px;
+			}
+		}
+	}
+
+	ul.usettings-nav {
+		position: relative;
+		width: 235px;
+		list-style: none;
+		list-style-image: none;
+		clear: both;
+		padding: 0px;
+		margin: 0px;
+		li {
+			overflow: hidden;
+			a {
+				color: inherit;
+				width: 235px;
+				display: block;
+				height: 30px;
+			}
+			cursor: pointer;
+			background-color: lighten($boxes-color, 4%);
+
+			border-left: transparent 4px solid;
+			//border-left: lighten($boxes-color, 1%) 4px solid;
+			height: 25px;
+			font-size: 17px;
+			line-height: 18px;
+			padding-top: 7px;
+			padding-left: 10px;
+			padding-bottom: 0px;
+			margin-bottom: 2px;
+			opacity: 0.9;
+			transition: 0.15s ease-in-out;
+			&:hover {
+				background-color: lighten($boxes-color, 6%);
+
+			}
+			&.current {
+				background-color: lighten($boxes-color, 6%);
+				border-left: $highlighted-color 4px solid;
+				font-weight: $bold;
+			}
+		}
+	}
+}

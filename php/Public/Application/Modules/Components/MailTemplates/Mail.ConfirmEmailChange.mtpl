@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            color: #fefefe;
+        }
+        table {
+            border-spacing: 0;
+        }
+        table td {
+            border-collapse: collapse;
+        }
+        .ExternalClass {
+            width: 100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+        a,
+        .ExternalClass a {
+            color: #1F9761;
+            text-decoration: none;
+        }
+        a:hover,
+        .ExternalClass a:hover {
+            color: #20A067;
+        }
+        .ReadMsgBody {
+            width: 100%;
+            background-color: #ebebeb;
+        }
+        table {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        .yshortcuts a {
+            border-bottom: none !important;
+        }
+        @media screen and (max-width: 599px) {
+            table[class="force-row"],
+            table[class="container"] {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            td[class*="container-padding"] {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+        }
+        .ios-footer a {
+            color: #fefefe !important;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body style="margin:0; padding:0;" bgcolor="#353836" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#353836" style="padding-bottom:50px;padding-top:20px;">
+        <tr>
+            <td class="maintd" align="center" valign="top" bgcolor="#F0F0F0" style="background-color: #353836;">
+
+                <br>
+                <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" style="width:600px;max-width:600px">
+                    <tr>
+                        <td class="container-padding header" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:24px;font-weight:bold;padding-bottom:12px;color:#20A067;padding-left:0px;padding-right:24px">
+                            <a href="http://linkr.com.br/" target="_blank" style="color: #20A067;">
+                                <img src="cid:LOGO" alt="Linkr" />
+                            </a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="container-padding content" align="left" style="padding-left:24px;padding-right:24px;padding-top:12px;padding-bottom:12px;background-color:#282A29;border-radius:3px">
+                            <br>
+                            <div class="title" style="font-family:Helvetica, Arial, sans-serif;font-size:18px;color:#eee">Oi, {UserName}!</div>
+                                                        <div class="body-text" style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:20px;text-align:left;color:#fefefe !important;"><br> Você está recebendo esta mensagem pois alterou recentemente o seu endereço de email cadastrado no Linkr.<br> Para concluir a alteração é necessário que você confirme o seu novo endereço de e-mail.<br><br> Você pode confirmá-lo <a target="_blank" href="{ConfirmLink}" style="color: #20A067;">clicando aqui</a>, ou acessando manualmente a seguinte URL:<a target="_blank" href="{ConfirmLink}" style="color: #c4c4c4;font-size:12px">{ConfirmLink}</a><br><br></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="container-padding footer-text" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#aaaaaa;padding-top:5px;padding-left:2px;">
+                            <table border="0" width="600" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="left" style="color:#eee;font-size:13px;">
+                                        Linkr, {Today}
+                                    </td>
+                                    <td align="right">
+                                        <a target="_blank" href="http://fb.com/linkrgames" style="text-decoration: none;color: #20A067;">
+                                            <img src="cid:IMGFB" alt="Facebook">
+                                        </a>
+                                        <a target="_blank" href="http://twitter.com/linkrgames" style="text-decoration: none;color: #20A067;">
+                                            <img src="cid:IMGTW" alt="Twitter">
+                                        </a>
+                                        <a target="_blank" href="http://youtube.com/linkrgames" style="text-decoration: none;color: #20A067;">
+                                            <img src="cid:IMGYT" alt="Youtube">
+                                        </a>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.ral-page {
+  @extend .pull-left;
+  width: 630px;
+  overflow: hidden;
+  min-height: 300px;
+  background-color: $boxes-color;
+  border-radius: $border-radius; // 4px;
+  color: lighten($boxes-color, 45%);
+  font-family: $title-font-family;
+  font-size: 14px;
+  position: relative;
+  line-height: 14px;
+  padding-bottom: 5px;
+  .old-games-triforce {
+    background-image: url('../images/mini-triade.png');
+    width: 360px;
+    height: 112px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    opacity: 0.5;
+    margin-left: -180px;
+    z-index: 0;
+  }
+	@extend .form-techy;
+}
+
+.ral-sidebar {
+  @extend .pull-right;
+  width: 310px;
+  min-height: 150px;
+  background-color: lighten($boxes-color, 2%);
+  border-radius: $border-radius; // 4px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	.get-linkr, .read-more {
+		width: 310px;
+		border-radius: 0px;
+	}
+}

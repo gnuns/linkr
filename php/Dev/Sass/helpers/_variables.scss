@@ -1,0 +1,59 @@
+// Colors
+$gray-darker: lighten(#000, 13.5%) !default; // #222
+$gray-dark: lighten(#000, 20%) !default; // #333
+$gray: lighten(#000, 33.5%) !default; // #555
+$gray-light: lighten(#000, 60%) !default; // #999
+$gray-lighter: lighten(#000, 93.5%) !default; // #eee
+
+$highlight-color-store: darken(#22A86C, 2%); //rgb(34,168,108)
+$highlight-color-community: #0A999D;
+$highlight-color-publish: #D64541;//$gray-lighter;
+
+$color-info: #5bc0de !default;
+$color-warning: #F7CA18 !default;
+$color-danger: #d9534f !default;
+
+$color-green: #5C9514 !default;
+$color-red: darken(#D9414E, 6%);//#D91E18; // !default;
+
+// Font weights
+$light: 300;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: 'Open Sans', Arial;
+$base-font-weight: $light;
+$base-font-size: 14px;
+$base-line-height: 1.4;
+
+// Titles' font
+$title-font-family: 'Strait', Arial, sans-serif;
+$title-font-weight: $light;
+$title-font-size: 18px;
+$title-line-height: 1.6;
+
+// Headings
+$header-font-weight: $bold;
+//#35373B or #262626... yeah: darken(#95A5A6, 50%)!!!
+$main-color: #2A2D2C;//darken(#ABB7B7, 52%);//#35373B;//darken(#EDEFF1, 70%);
+
+// Scaffolding
+$body-bg: #353836 !default;
+$text-color: #F1F1F1 !default;
+$e-text-color: #E5E5E5 !default;
+
+$second-color: $main-color;
+$third-color: darken($second-color, 0.5%);
+$fourth-color: darken($second-color, 3%);
+
+$out-text-color: $second-color !default;
+
+$boxes-color: $fourth-color;
+$boxes-color-hover: darken($boxes-color, 2%);
+
+// radius
+$border-radius: 3px;
+
+// Sizes
+$default-width: 960px;

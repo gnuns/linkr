@@ -1,0 +1,140 @@
+.footer-container {
+  height: 120px;
+  width: 100%;
+  min-width: $default-width;
+  background: darken($second-color, 3%);
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0px;
+
+  .footer-info-area {
+    width: $default-width;
+    height: 120px;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    @include center-block();
+    padding: 0px;
+    position: relative;
+
+    div.rights-info {
+
+      position: absolute;
+      width: 500px;
+      left: 0;
+      top: 50px;
+      color: darken(#DDDDDD, 35%);
+      font-size: 12px;
+      font-family: 'Open Sans', $base-font-family;
+
+      .copyright-meh {
+        // text-shadow: none;
+        color: darken(#999, 25%);
+      }
+    }
+
+    div.contact-info {
+      opacity: 0.7;
+      position: absolute;
+      min-width: 170px;
+      right: 0;
+      top: 25px;
+      font-family: $title-font-family;
+      line-height: 16px;
+
+      font-size: 16px;
+      text-transform: uppercase;
+      text-align: center;
+      // text-shadow: none;
+      color: lighten(darken($second-color, 3%), 50%);
+      .at-linkr {
+        color: darken($highlighted-color, 4%);
+      }
+      ul.contact-list{
+        clear: both;
+        height: 33px;
+        min-width: 170px;
+        padding: 0px;
+        list-style: none outside none;
+        margin: auto;
+        margin-top:4px;
+        li {
+
+          float: left;
+          margin:0;
+          color: #444;
+          font-family: $title-font-family;
+          line-height: 15px;
+          font-weight: $bold;
+          padding: 0px;
+          padding-left: 3px;
+          padding-right: 3px;
+          cursor: default;
+
+          a {
+            letter-spacing:normal;
+            transition: all 0.15s ease-in-out 0s;
+            font-size: 32px;
+            text-decoration: none;
+            color: darken($highlighted-color, 4%);
+            // text-shadow: 0px 2px 1px darken($second-color, 3%);
+            font-weight: $bold;
+
+            &:hover {
+              //// text-shadow: 0px 2px 3px darken($second-color, 10%);
+              color: darken($highlighted-color, 7%);
+              transition: all 0.15s ease-in-out 0s;
+            }
+            &:focus {
+              outline: 0;
+            }
+          }
+        }
+      }
+    }
+
+    ul.link-list{
+      opacity: 0.8;
+      position: absolute;
+      height: 20px;
+      width: 500px;
+      left: 0;
+      top: 8px;
+
+      padding: 0px;
+      list-style: none outside none;
+
+      li {
+        float: left;
+        margin:0;
+        margin-right: 5px;
+        color: #444;
+        font-family: $title-font-family;
+        line-height: 15px;
+        font-size: 15px;
+
+        padding: 0px;
+        cursor: default;
+
+        a {
+
+          font-size: 15px;
+          text-decoration: none;
+          color: #999;
+          // text-shadow: 0px 2px 1px darken($second-color, 3%);
+
+
+          &:hover {
+            //// text-shadow: 0px 2px 3px darken($second-color, 10%);
+            color: #BBB;
+          }
+          &:focus {
+            outline: 0;
+          }
+        }
+      }
+    }
+  }
+}

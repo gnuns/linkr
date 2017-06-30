@@ -1,0 +1,80 @@
+.textarea {
+  -moz-appearance: textfield-multiline;
+  -webkit-appearance: textarea;
+
+  font-family: $base-font-family;
+  font-size: $base-font-size - 2;
+  font-weight: $base-font-weight;
+
+
+  height: 100px;
+  overflow: auto;
+  padding: 2px;
+  resize: both;
+  width: 400px;
+
+  background-color: $boxes-color;
+  color: $text-color;
+
+  border-radius: $border-radius; // $border-radius;
+
+	border: solid 2px $second-color;
+  outline: none;
+
+  transition: all 0.15s ease-in-out 0s;
+
+  &:focus {
+    border: solid 2px lighten($second-color, 4%);
+    transition: all 0.15s ease-in-out 0s;
+  }
+}
+
+.input {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+
+
+  color: $text-color;
+  background-color: darken($body-bg, 3%); // $body-bg for search
+  border: solid 2px; // #585F62 for search
+  border-color:$second-color;
+  border-radius: $border-radius; // $border-radius;
+  outline: none;
+
+  margin-top: 5px;
+  padding: 4px;
+  padding-top: 0px;
+  padding-right:6px;
+  width: 200px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.15s ease-in-out 0s;
+  input {
+    position: absolute;
+    top: 5px;
+    margin: 0px;
+    padding: 0px;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    width: 90%;
+  }
+
+  &.with-icon {
+    padding-left: 26px;
+    .input-icon {
+      position: absolute;
+      left:4px;
+      top: 8px;
+      color: darken($second-color, 3%);
+      // text-shadow: 0px 1px 3px lighten($body-bg, 2%);
+      font-size: $base-font-size + 5;
+    }
+  }
+}

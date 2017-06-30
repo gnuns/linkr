@@ -1,0 +1,55 @@
+// Fontes antigas
+/*
+@font-face {
+	font-family: 'TSTAR';
+	src: url('../fonts/T-Star-regular-webfont.eot');
+	src: local('TSTAR'), local('TSTAR-Regular'), url('../fonts/T-Star-regular-webfont.woff') format('woff'), url('../fonts/T-Star-regular-webfont.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+ font-family: 'TSTAR Medium';
+ src: url('../fonts/T-Star-medium-webfont.eot');
+ src: local('TSTAR Medium'), url('../fonts/T-Star-medium-webfont.woff') format('woff'), url('../fonts/T-Star-medium-webfont.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+	font-family: 'TSTAR Bold';
+	src: url('../fonts/T-Star-bold-webfont.eot');
+	src: local('TSTAR Bold'), local('TSTAR-bold'), url('../fonts/T-Star-bold-webfont.woff') format('woff'), url('../fonts/T-Star-bold-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;;
+}
+*/
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v9/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v9/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://fonts.gstatic.com/s/opensans/v9/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Strait';
+    src: url('../fonts/Strait.eot');
+    src: url('../fonts/Strait.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Strait.svg') format('svg'),
+         url('../fonts/Strait.woff') format('woff'),
+         url('../fonts/Strait.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

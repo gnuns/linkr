@@ -1,0 +1,91 @@
+/*
+*/
+html, body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  min-height: 100%;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+
+  line-height: $base-line-height;
+  color: $text-color;
+  background: $body-bg !important;
+}
+.c-bg {
+  //background: no-repeat center center fixed;
+  // background-image: url('http://i.imgur.com/d1vaa1Z.jpg');
+  //background: center center;
+	background-image: url(../images/bgtoplinkr.mini.png); // url(http://i.imgur.com/d8KwSt4.png);
+  &.community {
+    background-image: url(../images/bt.comm.mini.png); // url(http://i.imgur.com/d8KwSt4.png);
+  }
+	background-repeat: repeat-x;
+	//webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  background-size: 960px;
+  position: absolute; //fixed;
+  top: 45px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 350px;
+  z-index: 1;
+	//opacity: 1;
+  //display: none;
+}
+/*
+.c-bg-two {
+  content: "";
+  //background: url(http://goldenfest.org/site/wp-content/themes/clifden/assets/img/black/gradient-radial-top.png) no-repeat center;
+  background: -webkit-radial-gradient(top,black,yellow,green);
+  background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.4), rgba(0,0,0,.2), rgba(0,0,0,.1),rgba(0,0,0,.05), transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+}*/
+
+body > * {
+   z-index: 10;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    //text-decoration: underline;
+    outline: 0;
+  }
+
+  /*&:focus {
+    @include tab-focus();
+  }*/
+}
+* {
+    text-rendering: optimizeLegibility;
+}
+img {
+  vertical-align: middle;
+}
+
+h1 {
+  font-family: $title-font-family;
+  font-size: $title-font-size;
+  line-height: $title-line-height;
+  color: $text-color;
+}
+
+@include selection($highlighted-color, darken($second-color, 1%));

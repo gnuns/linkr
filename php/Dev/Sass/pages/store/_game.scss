@@ -1,0 +1,1164 @@
+.game-page-header {
+  width: 960px;
+  height: 250px;
+  background-color: $second-color;
+  border-radius: $border-radius; // 4px;
+  position: relative;
+  clear: both;
+  padding: 0px;
+  background-size: cover;
+  overflow: hidden;
+
+  .top-toolbar-left {
+    z-index: 101;
+    width: 80px;
+    position: absolute;
+    top:0;
+    left:20px;
+  }
+  .top-toolbar-left {
+    overflow: hidden;
+    z-index: 101;
+    width:80px;
+    height: 10px;
+    padding-top:8px;
+    padding-bottom:17px;
+    position: absolute;
+    top:0px;
+    left:20px;
+    background-color: $boxes-color;
+    border-radius: 0px 0px 4px 4px;
+    a {
+      font-size: 20px;
+      margin-right: 3px;
+      margin-left:11px;
+      line-height: 20px;
+      color: lighten($second-color, 35%);
+      transition: all 0.15s ease-in-out 0s;
+      &:hover {
+        color:lighten(lighten($second-color, 35%), 20%);
+        transition: all 0.15s ease-in-out 0s;
+      }
+    }
+  }
+  .top-toolbar-right {
+    overflow: hidden;
+    z-index: 101;
+    width:183px;
+    height: 35px;
+    position: absolute;
+    top:0px;
+    right:20px;
+    background-color: $second-color;
+    border-radius: 0px 0px 4px 4px;
+
+    .like-game {
+      float:left;
+      font-size: 21px;
+      margin-top: 3px;
+      margin-left: 10px;
+      cursor: pointer;
+      color: lighten(lighten($second-color, 10%), 10%);
+      transition: all 0.15s ease-in-out 0s;
+      // text-shadow: 0px 1px 3px lighten($boxes-color, 2%);
+      &:hover {
+        color: $highlight-color-store;
+        transition: all 0.15s ease-in-out 0s;
+      }
+
+      &.liked {
+        color: $highlight-color-store;
+        &:hover {
+          color: lighten(lighten($second-color, 10%), 10%);
+          transition: all 0.15s ease-in-out 0s;
+          //// text-shadow: 0px 1px 2px darken($highlight-color-store, 2%);
+        }
+      }
+    }
+
+    .game-url { //Input
+      width: 107px;
+      height: 17px;
+      float: right;
+      padding-bottom: 4px;
+      padding-top: 1px;
+      padding-right:3px;
+      overflow: hidden;
+      padding-left: 23px;
+      border:lighten($second-color, 10%) 1px solid;
+      margin-right: 8px;
+      margin-top: 6px;
+      position: relative;
+      .link-icon {
+        cursor: default;
+        position: absolute;
+        left:0px;
+        top: 0px;
+        color: darken(lighten($second-color, 30%), 3%);
+        // text-shadow: 0px 1px 3px lighten(#474C4E, 2%);
+        font-size: 15px;
+        background-color: lighten($second-color, 10%);
+        width:16px;
+        padding-left:3px;
+        padding-right:2px;
+        padding-top:1px;
+        height: 22px;
+      }
+      input {
+        font-family: $title-font-family;
+        position: absolute;
+        top: 2px;
+        left: 23px;
+        width: 100px;
+        font-size: 12px;
+        line-height: 20px;
+        height: 20px;
+        margin: 0px;
+        padding: 0px;
+        color: darken(lighten($second-color, 30%), 4%);
+      }
+    }
+  }
+  .game-author {
+    cursor: default;
+    position: absolute;
+    height: 20px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: absolute;
+    z-index: 101;
+    font-family: $title-font-family;
+    font-size: 20px;
+    line-height: 20px;
+    //max-width: 600px;
+    left: 20px;
+    bottom:42px;
+    margin:0px;
+    color: #FFF;
+    border-radius: $border-radius; // 2px;
+    //    background-color: $third-color;
+    opacity: 0.9;
+  }
+  .game-title {
+    cursor: default;
+    position: absolute;
+    height: 25px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: absolute;
+    z-index: 101;
+    font-family: $title-font-family;
+    font-size: 25px;
+    line-height: 25px;
+    //max-width: 600px;
+    left: 20px;
+    bottom:16px;
+    margin:0px;
+    //font-weight: $bold;
+    color: #FFF;
+    border-radius: $border-radius; // 2px;
+    //    background-color: $third-color;
+    opacity: 0.9;
+  }
+
+  .get-game {
+
+    //border: darken($highlight-color-store, 12%) 2px solid;
+
+    position: absolute;
+    z-index: 101;
+    bottom:20px;
+    right:20px;
+    font-family: $title-font-family;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out 0s;
+
+		&.already {
+			color: #FFF;
+			padding: 8px 16px;
+			font-size: 22px;
+    	line-height: 25px;
+			border-radius: $border-radius; // 2px;
+			background-color: darken($highlight-color-store, 10%);
+    	// text-shadow: 0px 2px 3px darken(darken($highlight-color-store, 10%), 3%);
+			&:hover {
+				background-color: darken($highlight-color-store, 4%);
+			}
+		}
+		&.get {
+			width: 290px;
+			height: 40px;
+			overflow: hidden;
+			.price {
+				background-color: rgba($third-color, 0.8);
+				position: absolute;
+				left: 0px;
+				padding: 7px 0px;
+				padding-top: 6px;
+				width: 103px;
+				height: 27px;
+				font-size: 20px;
+
+				text-align: center;
+				border-radius: 3px 0px 0px 3px;
+				text-align: center;
+			}
+			&.w-discount {
+				width: 325px;
+				.price {
+					.the-price {
+						position: absolute;
+						left: 55px;
+						top: 0px;
+						font-size: 18px;
+						line-height: 20px;
+						font-weight: normal;
+						.original-price {
+							text-align: left;
+							opacity: 0.6;
+							margin-bottom: -4px;
+							color: darken($text-color, 12%);
+							text-decoration: line-through;
+							font-size: 12px;
+							clear: both;
+						}
+					}
+					width: 138px;
+					overflow: hidden;
+					.discount {
+						//font-family: $title-font-family;
+						z-index: 20;
+						bottom:0px;
+						left: -1px;
+						position: absolute;
+						padding: 5px;
+						padding-top: 13px;
+						padding-bottom: 9px;
+
+						line-height: 18px;
+						font-size: 14px;
+						font-weight: $bold;
+						width: 38px;
+						text-align: center;
+						height: 20px;
+						//border-radius: 0px 2px 2px 0px;
+						background-color: rgba(darken( $highlight-color-store , 5%), 0.8);
+					}
+				}
+			}
+			.add {
+				position: absolute;
+				float: left;
+				width: 175px;
+				right: 0px;
+				color: #FFF;
+				padding: 11px 6px;
+				font-size: 16px;
+				line-height: 18px;
+				text-align: center;
+				border-radius: 0px 3px 3px 0px;
+				background-color: darken($highlight-color-store, 10%);
+				// text-shadow: 0px 2px 3px darken(darken($highlight-color-store, 10%), 3%);
+				transition: all 0.15s ease-in-out 0s;
+				i {
+					font-size: 13px;
+				}
+			}
+		}
+
+    &:hover {
+			&.already {
+				background-color: darken($highlight-color-store, 4%);
+			}
+			&.get {
+				.add {
+					background-color: darken($highlight-color-store, 4%);
+				}
+			}
+      //border: $highlight-color-store 2px solid;
+      transition: all 0.15s ease-in-out 0s;
+    }
+  }
+  .grid-overlay {
+    z-index: 95;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 960px;
+    height: 250px;
+    @extend .grid-pattern-light;
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.7);
+  }
+  .already-got {
+		$thisshitbgcolor: darken($highlighted-color, 3%);
+
+    background-color: rgba($thisshitbgcolor, 0.7);
+		color: white;//darken($highlighted-color, 3%);
+		// text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15);
+		cursor: default;
+    z-index: 98;
+    width: 300px;
+    height: 18px;
+		padding: 4px;
+		//padding-top: 6px;
+    position: absolute;
+    top: 0px;
+		font-family: $title-font-family;
+    //left: 0px;
+		border-radius: 0px 0px 4px 4px;
+    right: 50%;
+		margin-right: -150px;
+		text-align: center;
+		font-size: 14px;
+		line-height: 18px;
+  }
+	.bottom-strip {
+    background-color: $third-color;
+    opacity: 0.5;
+    z-index: 97;
+    width: 960px;
+    height: 80px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+}
+.game-page-sidebar {
+  margin: 0px;
+  margin-top:10px;
+  padding: 0px;
+  @extend .pull-left;
+  width: 315px;
+
+  .factsheet {
+    overflow: hidden;
+    background-color: $boxes-color;
+    border-radius: $border-radius; // 4px;
+    width: 310px;
+    float:left;
+    clear: both;
+    margin:0px;
+    padding-bottom: 4px;
+    cursor: default;
+    .title {
+      width: 100%;
+      @extend .the-box-title;
+    }
+    .fact {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      position: relative;
+      //font-family: $title-font-family;
+      font-size: 13px;
+      height: 22px;
+      &.h {
+        background-color: lighten($boxes-color, 4%);
+      }
+
+      span.name {
+        position: absolute;
+        left: 10px;
+        top: 2px;
+      }
+      span.data {
+        position: absolute;
+        left: 95px;
+        top: 3px;
+        font-weight: $bold;
+      }
+    }
+
+  }
+  .pub-banner {
+    overflow: hidden;
+    background-color: $boxes-color;
+    border-radius: $border-radius; // 4px;
+    width: 310px;
+    height: 250px;
+    float:left;
+    clear: both;
+    margin:0px;
+    margin-top:10px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+
+    .top-strip {
+      position: absolute;
+      z-index: 1000000;
+      bottom: 0px;
+      right: 0px;
+      background-color: #222;
+      opacity: 0.85;
+      width: 80px;
+      height: 20px;
+      text-align: center;
+      //font-family: $title-font-family;
+      font-size: 13px;
+      cursor: default;
+      // text-shadow: 0px 2px 3px darken(#444, 10%);
+      border-radius: 3px 0px 0px 0px;
+    }
+    .banner-area{
+      top: 5px;
+      left: 5px;
+      position: absolute!important;
+      height: 240px !important;
+      width: 300px !important;
+      border-radius: $border-radius; // 4px !important;
+      overflow: hidden;
+      z-index: 2 !important;
+      @extend .grid-pattern;
+      .subdiv-hack {
+        overflow: hidden;
+        position: absolute!important;
+        width: 100%;
+        height: 100%;
+        div, div[style], object, object[style] {
+          width: 100% !important;
+          height: 100% !important;
+          margin: auto !important;
+          z-index: 1 !important;
+        }
+        iframe, iframe[style], iframe[width] {
+          margin: auto !important;
+          width: 100% !important;
+          height: 223px !important;
+        }
+      }
+    }
+  }
+  .download-status {
+    overflow: hidden;
+    background-color: $boxes-color;
+    border-radius: $border-radius; // 4px;
+    width: 310px;
+    height: 235px;
+    float:left;
+    clear: both;
+    margin:0px;
+    margin-top:10px;
+    padding: 0px;
+    .title {
+      @extend .the-box-title;
+    }
+    .chart {
+      margin-top:10px;
+      margin-left: -5px;
+    }
+  }
+  .social-ranking {
+    overflow: hidden;
+    background-color: $boxes-color;
+    border-radius: $border-radius; // 4px;
+    width: 310px;
+    height: 165px;
+    float:left;
+    clear: both;
+    margin:0px;
+    margin-top:10px;
+
+    .title {
+      @extend .the-box-title;
+    }
+    .data {
+      width: 100%;
+      margin: 0px;
+      padding: 0px 20px;
+      margin-bottom: 20px;
+
+      font-family: $title-font-family;
+      font-size: 23px;
+      height: 23px;
+      // text-shadow: 0px 2px 3px darken($boxes-color, 4%);
+      .icon {
+        // text-shadow: 0px 1px 2px darken($boxes-color, 8%);
+        color: $highlight-color-store;
+        font-size: 24px;
+      }
+      .number {
+        font-weight: $bold;
+      }
+      transition: all 0.15s ease-in-out 0s;
+      cursor: pointer;
+      &:hover {
+        color: $highlight-color-store;
+        opacity: 0.8;
+        transition: all 0.15s ease-in-out 0s;
+      }
+    }
+
+  }
+}
+.game-page-mainbar {
+  margin: 0px;
+  margin-top:10px;
+  padding: 0px;
+  @extend .pull-right;
+  width: 645px;
+
+  .game-press-media {
+    width: 630px;
+    @extend .pull-right;
+    background-color: $boxes-color;
+    min-height: 300px;
+    border-radius: $border-radius; // 4px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding: 0px;
+    overflow: hidden;
+
+    ul.select-media {
+      width: 100%;
+      background-color: lighten($boxes-color, 2%);
+      margin: 0px;
+      padding: 0px;
+      list-style: none outside none;
+      height: 38px;
+      overflow: hidden;
+      border-bottom: $boxes-color 1px solid;
+
+      li{
+        font-family: $title-font-family;
+        cursor: pointer;
+        // text-shadow: 0px 1px 2px darken(lighten($boxes-color, 2%), 4%);
+        text-transform: uppercase;
+        padding: 10px;
+        padding-top: 11px;
+        line-height: 19px;
+        //font-weight: $bold;
+        font-size: 18px;
+        color: #AAA;
+        min-width: 60px;
+        min-height: 30px;
+        margin: 0px;
+        color: lighten($boxes-color, 40%);
+        background-color: lighten($boxes-color, 2%);
+        border-right: $boxes-color 1px solid;
+        @extend .pull-left;
+        transition: all 0.15s ease-in-out 0s;
+
+        &.current{
+          background-color: $boxes-color;
+          color: #FFF;
+          //font-weight: $bold;
+          //border-radius: 6px 0px 0px 6px;
+          //border-right: lighten($boxes-color, 2%) 1px solid;
+          &:hover {
+            color: #FFF;
+            background-color:  $boxes-color;
+            cursor:default;
+          }
+        }
+        &:hover {
+          color: lighten(lighten(lighten($boxes-color, 2%), 2%), 50%);
+          background: lighten(lighten($boxes-color, 2%), 1%);
+          transition: all 0.15s ease-in-out 0s;
+        }
+      }
+    }
+		.tmd {
+			> div {
+				display: none;
+				&.visible {
+					display: block;
+				}
+			}
+			.reviews {
+				margin: 0px;
+				padding: 0px;
+				width: 630px;
+				min-height: 200px;
+				position: relative;
+				padding-bottom: 2px;
+
+				.a-review {
+					margin: 0px;
+					padding-bottom: 30px;
+					width: 100%;
+					margin-top: 3px;
+					margin-bottom: 1px;
+					position: relative;
+					height: auto;
+					overflow: hidden;
+					//display: table-column;
+					.rmv-rev {
+            position: absolute;
+						cursor: pointer;
+            z-index: 150;
+            top: 5px;
+            right: 65px;
+            font-size: 12px;
+            line-height: 12px;
+            padding: 2px;
+            padding-top: 2px;
+            background-color: darken($color-red, 3%);
+            color: lighten($color-red, 40%);
+            // text-shadow: none;
+            border-radius: 4px;
+            opacity: 0.7;
+            transition: all 0.15s ease-in-out 0s;
+            &:hover {
+              opacity: 0.9;
+              transition: all 0.15s ease-in-out 0s;
+            }
+          }
+					.the-review {
+						width: 465px;
+						margin-right: 4px;
+
+						@extend .pull-right;
+						overflow: hidden;
+
+						.review-info {
+							width: 465px;
+							height: 24px;
+							position: relative;
+							font-family: $title-font-family;
+							overflow: hidden;
+							background-color: lighten($boxes-color, 2%);
+							border-radius: 0px 3px 3px 0px;
+
+							.review-type {
+								// text-shadow: 0px 1px 2px darken(lighten($boxes-color, 2%), 6%);
+								cursor: default;
+								min-width: 120px;
+								overflow: hidden;
+								@extend .pull-left;
+								font-size: 16px;
+								line-height: 16px;
+
+								padding: 5px;
+								padding-left: 5px;
+								margin:0px;
+								i {
+									font-size: 16px;
+									//line-height: 16px;
+								}
+							}
+							.review-date {
+								// text-shadow: 0px 2px 3px darken(lighten($boxes-color, 2%), 8%);
+								cursor: default;
+								min-width: 65px;
+								overflow: hidden;
+								@extend .pull-left;
+								padding-top: 7px;
+								font-size: 11px;
+								line-height: 12px;
+
+								color:#999;
+							}
+							.review-audience {
+								min-width: 80px;
+								overflow: hidden;
+								@extend .pull-right;
+								padding: 4px;
+								margin-right: 0px;
+								p {
+									//cursor: pointer;
+									cursor: default;
+									padding: 0px;
+									margin: 0px;
+									font-size: 16px;
+									line-height: 16px;
+									float: right;
+									margin-right: 5px;
+
+									// text-shadow: 0px 1px 2px darken(lighten($boxes-color, 2%), 4%);
+									opacity: 1;//0.8;
+									min-width: 40px;
+									i {
+										letter-spacing: 3px;
+									}
+									transition: all 0.15s ease-in-out 0s;
+									&:hover {
+										//opacity: 1;
+										transition: all 0.15s ease-in-out 0s;
+									}
+								}
+							}
+						}
+						.review-content {
+							width: 460px;
+							min-height: 80px;
+							color: lighten(#B9B9B9, 10%);
+							font-size: 12px;
+							line-height: 1.2;
+							padding-top: 4px;
+							// text-shadow: 1px 1px 1px lighten($boxes-color, 5%);
+							overflow: hidden;
+							float: right;
+						}
+
+					}
+					.review-author-info {
+						cursor: default;
+						width: 155px;
+						min-height: 110px;
+						margin-left: 4px;
+						@extend .pull-left;
+						background-color: lighten($boxes-color, 2%);
+						padding: 0px;
+						padding-bottom: 5px;
+						overflow: hidden;
+						border-radius: 3px 0px 3px 3px;
+						.a-name-and-photo {
+
+							cursor: pointer;
+							width: 155px;
+							padding: 3px;
+							padding-top: 5px;
+							padding-bottom: 5px;
+							margin-top: 0px;
+							height: 36px;
+							//border-radius: 3px 3px 0px 0px;
+							background-color: darken(/*$boxes-color*/lighten($boxes-color, 2%), 0.8%);
+							img {
+								width: 32px;
+								height: 32px;
+								border-radius: $border-radius; // 3px;
+								float: left;
+								border: 2px darken(/*$boxes-color*/lighten($boxes-color, 2%), 3%) solid;
+							}
+							.a-name{
+								margin: 0px;
+								padding: 0px;
+								float: left;
+								width: 112px;
+								margin-top: 12px;
+								margin-left: 5px;
+								font-family: $title-font-family;
+								font-size: 14px;
+								line-height: 12px;
+
+								color: #DDD;
+							}
+						}
+						.user-rank-strip {
+							// $highlight-color-store: #22A86C;$highlight-color-community: #0A999D;$highlight-color-publish: $gray-lighter;
+							width: 100%;
+							height: 14px;
+							padding-top:2px;
+							margin: 0px;
+							background-color: $gray-light;
+							// text-shadow: 1px 1px 3px lighten($gray-light, 5%);
+							color:lighten($boxes-color, 2%);
+							text-align: center;
+							font-family: $title-font-family;
+							font-size: 12px;
+							line-height: 12px;
+
+							//border-radius: 0px 0px 3px 3px;
+							&.gamer {
+								background-color: $highlight-color-store;
+								text-shadow: 1px 1px 3px darken($highlight-color-store, 5%);
+							}
+							&.dev {
+								background-color: $highlight-color-publish;
+								 text-shadow: 1px 1px 3px darken($highlight-color-publish, 5%);
+							}
+							&.member {
+								background-color: $highlight-color-community;
+								text-shadow: 1px 1px 3px darken($highlight-color-community, 5%);
+							}
+						}
+						.activity-info {
+							width: 155px;
+							padding: 4px;
+							p {
+								font-family: $title-font-family;
+								font-size: 14px;
+								line-height: 14px;
+								//font-weight: $bold;
+								color: #DDD;
+								clear: both;
+								width: 100%;
+								padding: 0px;
+								margin: 2px;
+
+								b {
+									font-size: 14px;
+									color: #EEE;
+								}
+							}
+						}
+					}
+					.fav-button {
+						margin: 0px;
+						cursor: pointer;
+						position: absolute;
+						bottom: 2px;
+						right: 8px;
+						font-size: 18px;
+						line-height: 18px;
+						font-weight: $bold;
+						// text-shadow: 0px 1px 2px darken(lighten($boxes-color, 2%), 4%);
+						transition: all 0.15s ease-in-out 0s;
+						&:hover {
+							 transition: all 0.15s ease-in-out 0s;
+						}
+					}
+					&.positive {
+						$cur-type-color: $color-green;
+						.the-review {
+							.review-type {
+								color: $cur-type-color;
+							}
+							.review-audience {
+								color: $cur-type-color;
+							}
+						}
+						.fav-button {
+							color: #999;
+							&:hover {
+								color: $cur-type-color;
+							}
+							&.faved {
+								color: $cur-type-color;
+								&:hover {
+									color: #999;
+								}
+							}
+						}
+					}
+					&.negative {
+						$cur-type-color: $color-red;
+						.the-review {
+							.review-type {
+								color: $cur-type-color;
+							}
+							.review-audience {
+								color: $cur-type-color;
+							}
+						}
+						.fav-button {
+							color: #999;
+							&:hover {
+								color: $cur-type-color;
+							}
+							&.faved {
+								color: $cur-type-color;
+								&:hover {
+									color: #999;
+								}
+							}
+						}
+					}
+				}
+			}
+			.reviews-load-and-post {
+				@extend .load-and-post;
+			}
+			.updates {
+				margin: 0px;
+				padding: 0px;
+				width: 630px;
+				min-height: 300px;
+				.a-update {
+					margin: 0px;
+					padding-bottom: 5px;
+					width: 100%;
+					min-height: 130px;
+
+					.u-title-area {
+						overflow: hidden;
+						width: 100%;
+						height: 34px;
+						font-family: $title-font-family;
+						color: #999;
+						background-color: lighten($boxes-color, 2%);
+						position: relative;
+
+						.u-title {
+							cursor: pointer;
+							position: absolute;
+							top:10px;
+							left:10px;
+							line-height: 16px;
+							height: 16px;
+							font-size: 15px;
+
+							a {
+								color: #999;
+								line-height: 16px;
+								font-size: 15px;
+
+							}
+						}
+
+						.date-and-comments{
+							cursor: pointer;
+							width: 70px;
+							position: absolute;
+							top:5px;
+							right:5px;
+							overflow: hidden;
+							color: #666;
+							padding: 0px;
+							margin: 0px;
+							// text-shadow: 0px 2px 2px darken(lighten($boxes-color, 2%), 5%);
+							.date {
+								width: 73px;
+								text-align: center;
+								padding: 0px;
+								margin: 0px;
+								line-height: 12px;
+								height: 12px;
+								font-size: 12px;
+
+							}
+							.comments {
+								width: 70px;
+								text-align: center;
+								padding: 0px;
+								margin: 0px;
+								line-height: 12px;
+								height: 12px;
+								font-size: 12px;
+
+							}
+						}
+					}
+					.u-content {
+						color: lighten(#B9B9B9, 10%);
+						font-size: 13px;
+						line-height: 1.2;
+						width: 610px;
+						padding: 8px;
+						padding-top: 4px;
+						margin: auto;
+						// text-shadow: 1px 1px 1px lighten($boxes-color, 5%);
+						a {
+							color: lighten(#B9B9B9, 2%);
+							font-size: 13px;
+							// text-shadow: 1px 1px 1px lighten($boxes-color, 5%);
+							line-height: 1.2;
+							font-weight: $bold;
+						}
+					}
+				}
+			}
+			.requirements {
+				margin: 0px;
+				padding: 0px;
+				width: 630px;
+				min-height: 300px;
+				overflow: hidden;
+				border-radius: $border-radius; // 4px;
+				clear: both;
+				margin:0px;
+				padding-bottom: 12px;
+				.title {
+					@extend .the-box-title;
+				}
+				.fact {
+					width: 100%;
+					margin: 0px;
+					padding: 0px;
+					position: relative;
+					//font-family: $title-font-family;
+					font-size: 13px;
+					height: 22px;
+					background-color: lighten($boxes-color, 4%);
+					margin-top:1px;
+
+					span.name {
+						position: absolute;
+						left: 15px;
+						top: 3px;
+						color: #999;
+					}
+					span.data {
+						position: absolute;
+						left: 150px;
+						top: 3px;
+						color: #DDD;
+						font-weight: $bold;
+					}
+				}
+			}
+			.gallery {
+				margin: 0px;
+				padding: 0px;
+				width: 630px;
+				min-height: 300px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+
+				.spotlight-media {
+					height: 326.25px;
+					width: 580px;
+					margin: auto;
+					overflow: hidden;
+					margin-bottom: 5px;
+					border-radius: $border-radius; // 3px;
+					@extend .grid-pattern;
+					background-color: darken($boxes-color, 3%);
+					padding: 5px;
+					text-align: center;
+					img {
+						height: 326.25px;
+						margin: auto;
+						border-radius: $border-radius; // 2px;
+					}
+					iframe {
+						height: 326.25px;
+						width: 580px;
+						margin: auto;
+						border-radius: $border-radius; // 2px;
+					}
+					*:focus {
+						outline: 0;
+					}
+				}
+				.media-list {
+					height: 100px;
+					width: 580px;
+					margin: auto;
+					overflow: hidden;
+					margin-bottom: 5px;
+					border-radius: $border-radius; // 3px;
+					background: darken($boxes-color, 3%);
+					padding: 5px;
+					text-align: center;
+					position: relative;
+					.the-media-list {
+						overflow: hidden;
+						position: relative;
+						height: 100px;
+						width: 580px;
+						margin: auto;
+					}
+					ul {
+						list-style: none outside none;
+						margin: 0px;
+						padding: 0px;
+						height: 100px;
+						width: 900px;
+
+						li {
+							cursor: pointer;
+							overflow: hidden;
+							float: left;
+							margin-right: 5px;
+							width: 100px;
+							height: 90px;
+							padding: 5px;
+							border-radius: $border-radius; // 4px;
+							background: darken($boxes-color, 5%);
+							display: inline;
+							position: relative;
+							transition: all 0.15s ease-in-out 0s;
+							img {
+								width: 100px;
+								height: 90px;
+								margin: auto;
+								border-radius: $border-radius; // 3px;
+							}
+							&.current {
+								background: darken($boxes-color, 10%);
+								&:hover {
+									cursor: default;
+									background: darken($boxes-color, 10%);
+									.m-icon {
+										color: #DDD;
+										background: darken($boxes-color, 10%);
+									}
+								}
+								.m-icon{
+									color: #DDD;
+									background: darken($boxes-color, 10%);
+								}
+							}
+							.m-icon {
+								position: absolute;
+								right: 0px;
+								top: 0px;
+								padding: 5px;
+								padding-bottom: 3px;
+								background: darken($boxes-color, 5%);
+								line-height: 20px;
+								border-radius: 0px 0px 0px 3px;
+								height: 18px;
+								width: 30px;
+								font-size: 18px;
+								color: #555;
+								z-index: 10;
+								transition: all 0.15s ease-in-out 0s;
+								//font-weight: $bold;
+								opacity: 0.9;
+
+
+							}
+							&:hover {
+								background: darken($boxes-color, 6%);
+								transition: all 0.15s ease-in-out 0s;
+								.m-icon {
+									background: darken($boxes-color, 6%);
+									transition: all 0.15s ease-in-out 0s;
+									color: #888;//darken($highlight-color-store, 18%);
+								}
+							}
+						}
+					}
+					.control {
+						bottom:0px;
+						position: absolute;
+						line-height: 20px;
+						font-size: 20px;
+						color:  lighten($boxes-color, 30%);//darken($highlight-color-store, 10%);
+						z-index: 90;
+						background: darken($boxes-color, 3%);
+						width: 10px;
+						height: 20px;
+						padding: 5px 10px;
+						transition: all 0.15s ease-in-out 0s;
+						cursor: pointer;
+						&.prev {
+							text-align: right;
+							border-radius: 0px 6px 0px 0px;
+							left: 0px;
+						}
+						&.next {
+							border-radius: 6px 0px 0px 0px;
+							text-align: left;
+							right: 0px;
+						}
+						&:hover {
+							background: darken($boxes-color, 1.5%);
+							color: lighten($boxes-color, 50%);
+							transition: all 0.15s ease-in-out 0s;
+						}
+					}
+				}
+			}
+		}
+  }
+  .game-abstract {
+    width: 630px;
+    @extend .pull-right;
+    background-color: $boxes-color;
+    min-height: 150px;
+    border-radius: $border-radius; // 4px;
+    //overflow: hidden;
+    .title {
+      @extend .the-box-title;
+    }
+    .content {
+      color: lighten(#B9B9B9, 10%);
+      font-size: 13px;
+      line-height: 1.2;
+      width: 610px;
+      padding: 10px;
+      padding-top: 0px;
+      margin: auto;
+      word-wrap: break-word;
+      // text-shadow: 1px 1px 1px lighten($boxes-color, 5%);
+    }
+  }
+}
+

@@ -1,0 +1,451 @@
+/*
+ * To be called with extend!
+ */
+
+.grid-pattern-light {
+	background: url($grid-pattern) repeat;
+}
+.grid-pattern {
+	@extend .grid-pattern-light;
+	background-color: rgba($boxes-color, 0.9);
+	opacity: 0.9;
+}
+
+// Utility classes from Twitter Bootstrap
+
+// Floats
+// -------------------------
+
+.clearfix {
+  @include clearfix();
+}
+.center-block {
+  @include center-block();
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+.get-linkr {
+	cursor: pointer;
+	position: relative;
+	border-radius: $border-radius; // 4px;
+	overflow: hidden;
+	margin-bottom: 5px;
+	width: 320px;
+	height: 80px;
+	background: darken($highlighted-color, 10%);
+	// text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15);
+	color: $e-text-color;
+	transition: all 0.15s ease-in-out 0s;
+	.rm-text {
+		position: absolute;
+		font-family: $title-font-family;
+		font-size:30px;
+		top:10px;
+		left:42px;
+		.sub {
+			color: #FFF;
+			position: absolute;
+			left:80px;
+
+			top:38px;
+			font-size:14px;
+			// text-shadow: 0px 1px 2px darken(darken($highlighted-color, 10%), 10%);
+		}
+	}
+	&:hover {
+		background: darken($highlighted-color, 12%);
+		transition: all 0.15s ease-in-out 0s;
+	}
+}
+.read-more {
+	cursor: pointer;
+	position: relative;
+	border-radius: $border-radius; // 4px;
+	overflow: hidden;
+	margin-bottom: 5px;
+	width: 320px;
+	height: 60px;
+	background: $fourth-color;
+	// text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15);
+	color: #FFF;
+	transition: all 0.15s ease-in-out 0s;
+	.rm-text {
+		position: absolute;
+		font-family: $title-font-family;
+		font-size:23px;
+		top:13px;
+		left:16px;
+	}
+	&:hover {
+		background: darken($fourth-color, 2%);
+		transition: all 0.15s ease-in-out 0s;
+	}
+}
+.the-box-title {
+	font-family: $title-font-family;
+	width: 100%;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-top: 8px;
+  margin-bottom: 4px;
+  line-height: 19px;
+  color: #EEE;
+}
+
+
+
+ul.us-list {
+	width: 100%;
+	height: auto;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 10px;
+
+	li {
+		overflow: hidden;
+		margin-top:2px;
+		height: 25px;
+		position: relative;
+		font-family: $title-font-family;
+		font-size: 14px;
+		line-height: 16px;
+
+		&.ttl {
+			font-weight: $bold;
+			background-color: lighten($boxes-color, 6%);
+			color: lighten(lighten($boxes-color, 6%), 30%);
+			//cursor: default;
+
+		}
+		background-color: lighten($boxes-color, 3%);
+		color: lighten(lighten($boxes-color, 3%), 30%);
+
+	}
+	&.s-hl {
+		li {
+			cursor: default;// pointer;
+			.item {
+				position: absolute;
+				top: 5px;
+				&.p1 {
+					left: 10px;
+				}
+				&.p2 {
+					left: 310px;
+				}
+				&.p3 {
+					left: 515px;
+				}
+			}
+		}
+	}
+	&.s-hc {
+		li {
+			&.ttl {
+				opacity: 1;
+				cursor: default;
+			}
+			cursor: pointer;
+			//cursor: default;// pointer;
+			.item {
+				position: absolute;
+				top: 5px;
+				&.p1 {
+					left: 10px;
+				}
+				&.p2 {
+					left: 280px;
+				}
+				&.p3 {
+					left: 380px;
+				}
+				&.p4 {
+					left: 585px;
+				}
+			}
+			opacity: 0.8;
+			transition: all 0.15s ease-in-out 0s;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.ldng-anim {
+	.el1 {
+			background-color: rgba(0,0,0,0);
+			border: 5px solid $highlighted-color;
+			opacity: .9;
+			border-right: 5px solid rgba(0,0,0,0);
+			border-left: 5px solid rgba(0,0,0,0);
+			border-radius: $border-radius; // 50px;
+			box-shadow: 0 0 35px $highlighted-color;
+			width: 50px;
+			height: 50px;
+			margin: 0 auto;
+			-moz-animation: spinPulse 1s infinite ease-in-out;
+			-webkit-animation: spinPulse 1s infinite linear;
+	}
+
+	.el2 {
+			background-color: rgba(0,0,0,0);
+			border: 5px solid $highlighted-color;
+			opacity: .9;
+			border-left: 5px solid rgba(0,0,0,0);
+			border-right: 5px solid rgba(0,0,0,0);
+			border-radius: $border-radius; // 50px;
+			box-shadow: 0 0 15px $highlighted-color;
+			width: 30px;
+			height: 30px;
+			margin: 0 auto;
+			position: relative;
+			top: -50px;
+			-moz-animation: spinoffPulse 1s infinite linear;
+			-webkit-animation: spinoffPulse 1s infinite linear;
+	}
+}
+@-moz-keyframes spinPulse {
+			0% {
+					-moz-transform: rotate(160deg);
+					opacity: 0;
+					box-shadow: 0 0 1px $highlighted-color;
+			}
+
+			50% {
+					-moz-transform: rotate(145deg);
+					opacity: 1;
+			}
+
+			100% {
+					-moz-transform: rotate(-320deg);
+					opacity: 0;
+			};
+	}
+
+	@-moz-keyframes spinoffPulse {
+			0% {
+					-moz-transform: rotate(0deg);
+			}
+
+			100% {
+					-moz-transform: rotate(360deg);
+			};
+	}
+
+	@-webkit-keyframes spinPulse {
+			0% {
+					-webkit-transform: rotate(160deg);
+					opacity: 0;
+					box-shadow: 0 0 1px $highlighted-color;
+			}
+
+			50% {
+					-webkit-transform: rotate(145deg);
+					opacity: 1;
+			}
+
+			100% {
+					-webkit-transform: rotate(-320deg);
+					opacity: 0;
+			};
+	}
+
+	@-webkit-keyframes spinoffPulse {
+			0% {
+					-webkit-transform: rotate(0deg);
+			}
+
+			100% {
+					-webkit-transform: rotate(360deg);
+			};
+	}
+.post-new {
+	display: none;
+	#review-count {
+		font-family: $title-font-family;
+		position: absolute;
+		bottom: 75px;
+		right: 25px;
+		font-size: 15px;
+
+	}
+	.warning {
+		width: 100%;
+		min-height: 18px;
+		font-family: $title-font-family;
+		background-color: rgba(lighten($color-red, 2%), 0.9);
+		color: lighten($color-red, 40%);
+
+		//overflow: hidden;
+		z-index: 100;
+		position: absolute;
+		display: none;
+		top: 0px;
+		left: 0;
+		//box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+		border: 0px;
+		text-align: center;
+		padding-top: 10px;
+		font-size: 15px;
+		line-height: 15px;
+		padding-bottom: 10px;
+		.sub {
+			font-size: 12px;
+			margin-top: 2px;
+			line-height: 14px;
+			color: darken($color-warning, 20%);
+		}
+		a {
+			font-weight: $bold;
+			color: darken($color-warning, 23%);
+		}
+	}
+	.title {
+		@extend .the-box-title;
+		font-size: 16px;
+		//margin: 0px;
+		padding-left: 2px;
+	}
+	&.comment {
+		padding-bottom: 35px;
+		width: 615px;
+		.title {
+			padding: 2px;
+		}
+		.post {
+			padding-top: 8px;
+			padding-bottom: 0px;
+			height: 18px;
+			bottom: 10px;
+			right: 20px;
+		}
+		.textarea {
+			width: 600px;
+		}
+		#review-count {
+			left: 20px;
+			bottom: 30px;
+		}
+	}
+	.u-liked {
+		@extend .the-box-title;
+		font-size: 14px;
+		text-transform: none;
+		//margin: 0px;
+		padding-left: 4px;
+		margin: 0px;
+		padding: 0px;
+		margin-top: -4px;
+		width: 350px;
+		.hein {
+			height: 40px;
+			margin-top: 5px;
+			.opinion {
+				cursor: pointer;
+				padding: 4px 15px;
+				text-transform: uppercase;
+				float: left;
+				margin-right: 10px;
+				border-radius: $border-radius;
+				transition: 0.2s ease-in-out 0s;
+				&.yep {
+					background-color: darken($color-green, 6%);
+					&:hover, &.focused {
+						transition: 0.2s ease-in-out 0s;
+						background-color: darken($color-green, 2%);
+					}
+				}
+				&.nope {
+					background-color: darken($color-red, 6%);
+					&:hover, &.focused {
+						transition: 0.2s ease-in-out 0s;
+						background-color: darken($color-red, 2%);
+					}
+				}
+				&.nono {
+					opacity: 0.3;
+					&:hover {
+						opacity: 0.75;
+					}
+				}
+			}
+		}
+
+	}
+	.post {
+
+			font-family: $title-font-family;
+			text-transform: uppercase;
+			font-size: 14px;
+
+			cursor: pointer;
+			color: lighten($boxes-color, 2%);
+
+			background-color: darken($highlighted-color, 8%);
+			border-radius: $border-radius; // 3px;
+			width: 155px;
+			height: 23px;
+			padding-top: 4px;
+			//padding-bottom: 3px;
+			text-align: center;
+			position: absolute;
+			bottom: 30px;
+			right: 25px;
+			transition: all 0.15s ease-in-out 0s;
+			&:hover {
+				transition: all 0.15s ease-in-out 0s;
+				background-color: darken($highlighted-color, 4%);
+			}
+
+		}
+	.textarea {
+		width: 580px;
+		padding: 5px;
+		margin: 0px;
+		cursor: text;
+		word-break: break-all;
+		overflow-x:hidden;
+	}
+	width: 600px;
+	padding: 15px;
+	margin: 0px;
+	margin-top:5px;
+	margin-bottom: 5px;
+	position: relative;
+	background-color: lighten($boxes-color, 2%);
+}
