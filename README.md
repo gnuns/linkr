@@ -16,6 +16,9 @@ Decidi publicar esse código fonte por motivos de manutenção de algo historica
 ### Screenshots
 ![http://i.imgur.com/LBrS9xc.png](http://i.imgur.com/LBrS9xc.png)
 ![http://i.imgur.com/Rx36wLD.png](http://i.imgur.com/Rx36wLD.png)
+
+### Outros Links
+* [Página de "pré lançamento" do projeto (no WebArchive)](https://web.archive.org/web/20140516205426/http://linkr.com.br/)
 ### Agradecimentos, créditos e licença
 - Os códigos, desenhos, logos, textos e easter eggs no código foram feitos por [mim](https://multiverso.me/). Os códigos estão sob [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.txt) e o resto sob [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - O game "[Amnesia: Fear in Hands](http://www.moddb.com/mods/amnesia-fear-in-hands/)" que aparece em algumas páginas, era um MOD desenvolvido pelo Lyautey M. Neto e o pessoal da [Blaster Lizard](https://www.facebook.com/blasterlizardcompany/). (Valeu pelo apoio e desculpa nunca lançar o projeto!)
